@@ -1,6 +1,6 @@
 %% PLot Besseö Functions of First Kind
 % Define the domain
- eta = 0:0.1:20
+ eta = 0:0.1:20;
  %%
  % Calculate the first five Bessel functions
 
