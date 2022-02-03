@@ -1,5 +1,3 @@
-% Arbeitsauftrag Thomas Pail %
-
 % Amplitude Modulation (AM)
 
 fs = 500e3; % sample rate 500 kHz
