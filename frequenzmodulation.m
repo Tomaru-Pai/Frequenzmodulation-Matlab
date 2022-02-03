@@ -15,7 +15,10 @@ ub = cos(2 * pi * fb * t);
 
 %%%%%%% Modulation %%%%%%%
 % Integral von ub
-delta_f = 4000; % Frequnezhub  => Zwischen 16kHz und 24kHz kann variert werden
+% delta_f = 4800; % Frequnezhub  => Zwischen 16kHz und 24kHz kann variert werden % Bei 4800HZ verschwindet der Träger komplet(In AM ganz schlecht)
+eta = 3; % Modulation Index | wenn: eta < 1 => "Narrowband FM", "Schmalband FM"
+% Mit Hilfe Bessel Funktion wissen wir => bei 2.4, 5.5 etc. Trägernullstelle
+delta_f = eta * fb;
 int_ub = 1/fs * cumsum(ub);
 ufm = cos(2 * pi * fc * t + 2 * pi * delta_f * int_ub);
 
